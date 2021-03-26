@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Social Media DashBoard]</title>
+
+  <!-- Link for the fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link for the css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      color: white;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="flex flex--between flex--al-center">
+      <div class="flex flex--column">
+        <h1 class="heading">Social Media Dashboard</h1>
+        <h2 class="d-blue header-text">Total Followers: 23,004</h2>
+      </div>
+      <div class="flex flex--al-center">
+        <div class="d-blue colorTag">Dark Mode</div>
+        <input id="colorMode" type="checkbox" style="display: none">
+        <label id="colorToggler" for="colorMode"></label>
+      </div>
+    </div>
+  </header>
+
+  <div class="cover">
+
+    <div class="grid grid--gap-dashboard grid--dashboard-top">
+      <div class="grid--block-top card-flip">
+        <!-- Front face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner dark facebook">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-facebook.svg" alt="icon of facebook">
+            <div class="d-blue">@nathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">1987</div>
+            <div class="d-blue">FOLLOWERS</div>
+          </div>
+          <div class="up-count count-def">12 Today</div>
+        </div>
+
+        <!-- Back face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner card-back facebook">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-facebook.svg" alt="icon of facebook">
+            <div class="d-blue">@nathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">1987</div>
+            <div class="d-blue">FOLLOWERS</div>
+          </div>
+          <div class="up-count count-def">12 Today</div>
+        </div>
+      </div>
+
+      <div class="grid--block-top card-flip ">
+        <!-- Front face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner dark twitter">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-twitter.svg" alt="icon of twitter">
+            <div class="d-blue">@nathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">1044</div>
+            <div class="d-blue">FOLLOWERS</div>
+          </div>
+          <div class="up-count count-def">99 Today</div>
+        </div>
+
+        <!-- Back face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner card-back twitter">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-twitter.svg" alt="icon of twitter">
+            <div class="d-blue">@nathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">1044</div>
+            <div class="d-blue">FOLLOWERS</div>
+          </div>
+          <div class="up-count count-def">99 Today</div>
+        </div>
+      </div>
+
+      <div class="grid--block-top card-flip ">
+        <!-- Front face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner dark instagram">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-instagram.svg" alt="icon of instagram">
+            <div class="d-blue"> @realnathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">11k</div>
+            <div class="d-blue">Subscribers</div>
+          </div>
+          <div class="up-count count-def">1099 Today</div>
+        </div>
+
+        <!-- Back face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner card-back instagram">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-instagram.svg" alt="icon of instagram">
+            <div class="d-blue">@realnathanf</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">11k</div>
+            <div class="d-blue">FOLLOWERS</div>
+          </div>
+          <div class="up-count count-def">1099 Today</div>
+        </div>
+      </div>
+
+      <div class="grid--block-top card-flip ">
+        <!-- Front face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner dark youtube">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-youtube.svg" alt="icon of youtube">
+            <div class="d-blue">Nathan F.</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">8239</div>
+            <div class="d-blue">Subscribers</div>
+          </div>
+          <div class="down-count count-def">144 Today</div>
+        </div>
+
+        <!-- Back face -->
+        <div class="flex flex--column flex--al-center flex--even card-inner card-back youtube">
+          <div class="flex flex--top-gap">
+            <img src="images/icon-youtube.svg" alt="icon of youtube">
+            <div class="d-blue">Nathan F.</div>
+          </div>
+          <div class="flex flex--column">
+            <div class="top-count">8239</div>
+            <div class="d-blue">Subscribers</div>
+          </div>
+          <div class="down-count count-def">144 Today</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading">Overview - Today</div>
+
+    <!-- First Bottom Grid -->
+    <div class="grid grid--gap-dashboard grid--dashboard-bottom">
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Page Views</h3>
+            <img src="images/icon-facebook.svg" alt="vector icon of facebook">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">87</div>
+            <div class="up-count count-def">3%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Page Views</h3>
+            <img src="images/icon-facebook.svg" alt="vector icon of facebook">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">87</div>
+            <div class="up-count count-def">3%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-facebook.svg" alt="vector icon of facebook">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">52</div>
+            <div class="down-count count-def">2%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-facebook.svg" alt="vector icon of facebook">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">52</div>
+            <div class="down-count count-def">2%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-instagram.svg" alt="vector icon of instagram">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">5462</div>
+            <div class="up-count count-def">2257%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-instagram.svg" alt="vector icon of instagram">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">5462</div>
+            <div class="up-count count-def">2257%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Profile Views</h3>
+            <img src="images/icon-instagram.svg" alt="vector icon of instagram">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">52k</div>
+            <div class="up-count count-def">1375%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Profile Views</h3>
+            <img src="images/icon-instagram.svg" alt="vector icon of instagram">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">52k</div>
+            <div class="up-count count-def">1375%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Bottom Grid -->
+    <div class="grid grid--gap-dashboard grid--dashboard-bottom">
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Retweets</h3>
+            <img src="images/icon-twitter.svg" alt="vector icon of twitter">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">117</div>
+            <div class="up-count count-def">303%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Retweets</h3>
+            <img src="images/icon-twitter.svg" alt="vector icon of twitter">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">177</div>
+            <div class="up-count count-def">303%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-twitter.svg" alt="vector icon of twitter">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">507</div>
+            <div class="up-count count-def">553%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-twitter.svg" alt="vector icon of twitter">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">507</div>
+            <div class="up-count count-def">553%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-youtube.svg" alt="vector icon of youtube">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">107</div>
+            <div class="down-count count-def">19%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Likes</h3>
+            <img src="images/icon-youtube.svg" alt="vector icon of youtube">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">107</div>
+            <div class="down-count count-def">19%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip ">
+        <!-- Front Face -->
+        <div class="flex grid--block-bottom flex--column flex--between dark card-inner">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Total Views</h3>
+            <img src="images/icon-youtube.svg" alt="vector icon of youtube">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">1407</div>
+            <div class="down-count count-def">12%</div>
+          </div>
+        </div>
+
+        <!-- Back Face -->
+        <div class="flex grid--block-bottom flex--column flex--between card-inner card-back">
+          <div class="flex flex--between">
+            <h3 class="d-blue">Total Views</h3>
+            <img src="images/icon-youtube.svg" alt="vector icon of youtube">
+          </div>
+          <div class="flex flex--between flex--al-end">
+            <div class="bottom-count">1407</div>
+            <div class="down-count count-def">12%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://twitter.com/RaymartPamplona">Raymart Pamplona</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

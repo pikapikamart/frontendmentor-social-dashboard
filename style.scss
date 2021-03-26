@@ -1,0 +1,384 @@
+@import "variables";
+
+// HTML PRESETS
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    background-color: $vd-blue;
+    font-family: 'Inter', sans-serif;
+    height: 800px;
+    margin: 0 auto;
+    max-width: 1440px;
+    transition: background-color 1s 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: $vd-blue-top;
+    border-bottom-left-radius: 18px;
+    height: 244px;
+    padding: 42px 8% 0;
+    transition: background-color 1s 0.5s ease;
+}
+
+// Custom Items
+
+.heading {
+    color: $white;
+    font-size: 27px;
+    font-weight: 700;
+    transition: color 1s 0.5s ease;
+}
+
+div.heading {
+    margin: 50px 0 28px;
+}
+
+.d-blue {
+    color: $d-blue;
+    font-size: 14px;
+}
+
+.header-text {
+    margin: 8px 0;
+    transition: color 0.5s ease;
+}
+
+.colorTag {
+    font-weight: 700;
+    transition: color 1s 0.5s ease;
+}
+
+.card-flip {
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+
+    .dark {
+        opacity: 0;
+        transition: background-color 0.3s ease, opacity 1s cubic-bezier(1, 0.04, 0.17, 1);
+    }
+}
+
+
+.card-inner {
+    backface-visibility: hidden;
+    border-radius: 8px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    &::after {
+        content: "";
+        border-radius: 8px 8px 0 0;
+        height: 6px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.card-back {
+    background-color: $lg-blue;
+    transform: rotateY(180deg);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: rgb(218, 218, 218);
+    }
+
+    .d-blue {
+        color: $dg-blue;
+    }
+
+    .top-count,
+    .bottom-count {
+        color: $vd-blue;
+    }
+}
+
+.dark {
+    background-color: $dd-blue;
+    transition: background-color 0.3s ease, opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: rgba(50, 55, 84, 1);
+    }
+}
+
+.top-count {
+    color: $white;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.bottom-count {
+    color: $white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.top-count + .d-blue {
+    letter-spacing: 4px;
+}
+
+.count-def {
+    font-size: 13px;
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+        left: -14px;
+        position: absolute;
+        top: -2px;
+    }
+}
+
+.up-count {
+    color: $l-green;
+
+    &::before {
+        content: url("images/icon-up.svg");
+    }
+}
+
+.down-count {
+    color: $b-red;
+
+    &::before {
+        content: url("images/icon-down.svg");
+    }
+}
+
+.white {
+    background-color: $white;
+
+    header {
+        background-color: $vp-blue;
+    }
+
+    .heading {
+        color: $vd-blue;
+    }
+
+    .header-text,
+    .colorTag {
+        color: $dg-blue
+    }
+
+}
+// Social Media classes
+
+.facebook::after {
+    background-color: $fb;
+}
+
+.twitter::after {
+    background-color: $twitter;
+}
+
+.instagram::after {
+    background-image: $ig;
+}
+
+.youtube::after {
+    background-color: $yt;
+}
+
+
+// Primary
+
+.flex {
+    display: flex;
+
+    // States
+    &--column {
+        flex-direction: column;
+    }
+
+    &--between {
+        justify-content: space-between;
+    }
+
+    &--even {
+        justify-content: space-evenly;
+    }
+
+    &--around {
+        justify-content: space-around;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--al-center {
+        align-items: center;
+    }
+
+    &--al-start {
+        align-items: flex-start;
+    }
+
+    &--al-end {
+        align-items: flex-end;
+    }
+
+    &--top-gap {
+        gap: 0 8px;
+        margin-top: 8px;
+    }
+
+    &--row-gap-1 {
+        row-gap: 28px;
+    }
+}
+
+.grid {
+    display: grid;
+
+    // States
+    &--block-top {
+        text-align: center;
+    }
+
+    &--block-bottom {
+        padding: 24px 26px;
+    }
+
+    &--gap-dashboard {
+        grid-template-columns: repeat(4, 258px);
+        gap: 24px 28px;
+    }
+
+    &--dashboard-top {
+        grid-template-rows: 218px;
+    }
+
+    &--dashboard-bottom {
+        grid-template-rows: 126px;
+        margin-bottom: 24px;
+    }
+}
+
+#colorMode:checked + #colorToggler::after {
+    background-color: $white;
+    left: 24px;
+}
+
+#colorToggler {
+    background-image: $d-toggle;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 24px;
+    margin-left: 14px;
+    position: relative;
+    width: 48px;
+
+    &::after {
+        content: "";
+        background-color: $vd-blue;
+        border-radius: 100px;
+        height: 18px;
+        left: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: left 0.3s ease,
+                    background-color 0.3s ease;
+        width: 18px;
+    }
+}
+
+.cover {
+    padding: 0 8%;
+    transform: translateY(-100px);
+}
+
+
+
+// Medias
+@media (min-width: 1440px) {
+    
+    header {
+        padding: 42px 164px 0;
+    }
+
+    .cover {
+        padding: 0 164px;
+    }
+}
+
+@media (max-width: 1230px) {
+
+    .grid {
+
+        &--gap-dashboard {
+            grid-template-columns: repeat(3, 258px);
+        }
+
+        &--dashboard-top {
+            grid-template-rows: repeat(2, 218px);
+        }
+
+        &--dashboard-bottom {
+            grid-template-rows: repeat(2, 126px);
+        }
+    }
+}
+
+@media (max-width: 940px) {
+
+    .grid {
+        justify-content: center;
+
+        &--gap-dashboard {
+            grid-template-columns: repeat(2, 258px);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .grid {
+
+        &--gap-dashboard {
+            grid-template-columns: 258px;
+        }
+
+        &--dashboard-top {
+            grid-template-rows: repeat(4, 218px);
+        }
+
+        &--dashboard-bottom {
+            grid-template-rows: repeat(4, 126px);
+        }
+    }
+}

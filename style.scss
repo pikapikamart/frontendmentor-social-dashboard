@@ -69,6 +69,20 @@ div.heading {
     transition: color 1s 0.5s ease;
 }
 
+.toggler {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+
+    &:focus {
+
+        + label {
+            box-shadow: 0 0 1px 0.1rem white, 
+                        0 0 1px 0.2rem $d-blue;
+        }
+    }
+}
+
 .card-flip {
     border-radius: 8px;
     cursor: pointer;
